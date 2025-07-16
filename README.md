@@ -9,7 +9,8 @@
 ## Overview
 
 ### Screenshot
-![Social Links Profile Preview](assets/images/webpage_screenshot.png)
+![Perfume Card Preview (Desktop)](assets/images/webpage_screenshot1.png)
+![Perfume Card Preview (Mobile)](assets/images/webpage_screenshot2.png)
 
 ### Links
 - Solution URL: [GitHub Repository](https://github.com/Lodin03/perfume-card)
