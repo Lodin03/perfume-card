@@ -21,7 +21,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "image content";
   max-width: clamp(20rem, 90vw, 43rem);
-  background-color: $white; // Using color variables in SCSS
+  background-color: $cream; // Using color variables in SCSS
   border-radius: 0.5rem;
 }
 

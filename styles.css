@@ -14,7 +14,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "image content";
   max-width: clamp(20rem, 90vw, 43rem);
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(30, 38%, 92%);
   border-radius: 0.5rem;
 }
 
@@ -91,11 +91,16 @@ body {
   font-size: clamp(0.75rem, 1.5vw, 0.9rem);
   font-weight: 700;
   border-radius: 0.5rem;
-  cursor: pointer;
   background-color: hsl(158, 36%, 37%);
   color: hsl(0, 0%, 100%);
 }
-
+.perfume-card__button:hover {
+  cursor: pointer;
+  background-color: hsl(158, 42%, 18%);
+}
+.perfume-card__button:focus {
+  outline: 2px solid hsl(212, 21%, 14%);
+}
 
 /* Responsive layout for smaller devices (<600px) */
 @media (max-width: 600px) {
