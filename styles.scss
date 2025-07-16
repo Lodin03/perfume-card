@@ -1,0 +1,123 @@
+$green_500: hsl(158, 36%, 37%); // STORING COLOR VARIABLES WITH SCSS
+$green_700: hsl(158, 42%, 18%);
+$black: hsl(212, 21%, 14%);
+$grey: hsl(228, 12%, 48%);
+$cream: hsl(30, 38%, 92%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  background-color: $cream;
+  font-family: 'Fraunces', serif;
+}
+
+.perfume-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.perfume-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "image content";
+  max-width: clamp(20rem, 90vw, 43rem);
+  background-color: $white; // Using color variables in SCSS
+  border-radius: 0.5rem;
+}
+
+.perfume-card__image-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.perfume-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.perfume-card__content {
+  padding: clamp(1.25rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  justify-content: center;
+}
+
+.perfume-card__header {
+  font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+  letter-spacing: 0.3rem;
+  color: $grey;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.perfume-card__title {
+  font-size: clamp(1.5rem, 5vw, 2.75rem);
+  font-weight: 700;
+  margin-block: 0.25rem;
+  color: $black;
+}
+
+.perfume-card__description {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: $grey;
+  padding-block-start: clamp(0.25rem, 1vw, 0.5rem);
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.perfume-card__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.perfume-card__price-new {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: $green_500;
+  font-weight: bold;
+}
+
+.perfume-card__price-old {
+  text-decoration: line-through;
+  color: $grey;
+}
+
+.perfume-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: 0.75rem;
+  padding: clamp(0.5rem, 2vw, 1rem);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  background-color: $green_500;
+  color: $white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $green_700;
+  }
+
+  &:focus {
+    outline: 2px solid $black;
+  }
+}
+
+/* Responsive layout for smaller devices (<600px) */
+@media (max-width: 600px) {
+  .perfume-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "content";
+  }
+}
+
